@@ -19,7 +19,7 @@ npm i bootstrap jquery popper.js
 
 crear folders:
 cd src/app/
-mkdir components
+mkdir components (ng g m components)
 mkdir modules
 mkdir services
 
@@ -34,3 +34,9 @@ ng g c components/cursos --skipTests=true
 #crear el módulo rutas si lo olvidamos crear desde el inicio
 #La opción flat evita que se cree una nueva carpeta para el nuevo módulo y la opción module nos permite indicar que nuevo módulo debe ser importado en el AppModule.
 ng generate module app-routing --flat --module=app
+
+# mover el navbar a un modulo:
+ng g m layout
+#crear el componente del navbar
+ng g c layout/navbar --skipTests=true
+
