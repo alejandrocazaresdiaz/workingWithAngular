@@ -1,0 +1,36 @@
+ng new angularProject
+
+ng serve -o
+#The serve command requires to be run in an Angular project, but a project definition could not be found.
+
+  #https://www.angularjswiki.com/angular/could-not-find-module-angular-devkit-build-angular/
+	cd angularProject
+	rm -r node_modules
+	npm install
+	#npm WARN deprecated source-map-resolve@0.6.0: See https://github.com/lydell/source-map-resolve#deprecated
+
+	npm install -g @angular-devkit/build-angular
+	npm install @angular/cli
+	ng serve -o
+
+#agregar mas dependencias
+npm i bootstrap jquery popper.js
+#incluir dependencias en el angular.json (ver historial de git)
+
+crear folders:
+cd src/app/
+mkdir components
+mkdir modules
+mkdir services
+
+#crear el componente alumnos
+ng g c components/alumnos
+#se creó con archivo para pruebas, no lo requerimos ahorita
+rm components/alumnos/alumnos.component.spec.ts
+
+#crear componente cursos, pero ahora sin generar el archivo de tests
+ng g c components/cursos --skipTests=true
+
+#crear el módulo rutas si lo olvidamos crear desde el inicio
+#La opción flat evita que se cree una nueva carpeta para el nuevo módulo y la opción module nos permite indicar que nuevo módulo debe ser importado en el AppModule.
+ng generate module app-routing --flat --module=app
