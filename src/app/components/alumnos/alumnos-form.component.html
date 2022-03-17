@@ -1,0 +1,23 @@
+<p>{{titulo}} (Users)</p>
+
+<form id="form1" name="form1" #form="ngForm">
+    <input type="hidden" name="userId" id="userId" [(ngModel)]="user.id">
+  <div class="form-group">
+    <label for="field1">Nombre</label>
+    <input type="text" class="form-control" id="field1" name="field1" placeholder="Enter your name" [(ngModel)]="user.name" />
+    <small class="form-text text-muted">We coul'd display info here.</small>
+  </div>
+  <div class="form-group">
+    <label for="field2">Alias</label>
+    <input type="text" class="form-control" id="field2" name="field2" placeholder="Enter your Alias" [(ngModel)]="user.userName" />
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="crear()">Crear</button> &nbsp;
+  <button type="submit" class="btn btn-secondary" routerLink="/alumnos">Regresar</button>
+
+</form>
+
+

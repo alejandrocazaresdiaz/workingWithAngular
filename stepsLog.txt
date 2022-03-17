@@ -43,7 +43,12 @@ ng g c layout/navbar --skipTests=true
 #crear los modelos
 ng g class models/curso --skipTests=true
 ng g class models/alumno --skipTests=true
+ng g class models/user --skipTests=true
 
 #crear los servicios
 ng g service services/alumno --skipTests=true
 ng g s services/curso --skipTests=true
+ng g s services/user --skipTests=true
+
+#crear componente alumnos form --flat para que no genere una nueva carpeta interior
+ng g c components/alumnos/alumnos-form --flat --skipTests=true
